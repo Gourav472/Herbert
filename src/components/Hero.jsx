@@ -10,7 +10,7 @@ const Hero = () => {
       <div className='container relative z-20'>
         <Header />
         <div className='pt-[72px] sm:pt-24 md:pt-28 lg:pt-32 xl:pt-[139px] pb-[78px] flex flex-col items-center'>
-          <h1 className='max-sm:max-w-[320px] sm:max-w-[420px] md:max-w-[550px] lg:max-w-[716px] text-center font-rubik font-bold text-custom-2xl leading-[33px] sm:text-4xl sm:leading-10 md:leading-[55px] md:text-5xl lg:text-custom-3xl lg:leading-[66px] text-offBlack'>Navigating <span className='text-darkRed font-rubik'>German Bureaucracy</span> with ease</h1>
+          <h1 className='max-sm:max-w-[320px] sm:max-w-[420px] md:max-w-[550px] lg:max-w-[716px] text-center font-rubik font-bold text-custom-2xl leading-[33px] sm:text-4xl sm:leading-10 md:leading-[55px] md:text-5xl lg:text-custom-4xl lg:leading-[66px] text-offBlack'>Navigating <span className='text-darkRed font-rubik'>German Bureaucracy</span> with ease</h1>
           <PrimaryParagraph className="pt-[14px] sm:pt-4 max-sm:text-sm max-sm:leading-[21px]" text="Herbert Visa: Your AI-powered assistant for German visa and immigration processes" />
           <PrimaryButton className="mt-8 sm:mt-9 md:mt-[42px] max-sm:max-w-[302px] max-sm:text-sm max-sm:leading-4 max-w-[338px] w-full" text="Start your conversation with Herbert" />
         </div>

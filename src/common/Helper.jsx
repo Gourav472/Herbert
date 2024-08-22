@@ -7,6 +7,9 @@ import number3Icon from '../assets/images/svg/number3.svg'
 import number4Icon from '../assets/images/svg/number4.svg'
 import number5Icon from '../assets/images/svg/number5.svg'
 import number6Icon from '../assets/images/svg/number6.svg'
+import basicIcon from '../assets/images/svg/basic.svg'
+import standerdIcon from '../assets/images/svg/standerd.svg'
+import premiumIcon from '../assets/images/svg/premium.svg'
 
 export const NAV_ITEMS_DATA = [
     {
@@ -65,5 +68,28 @@ export const WORK_DATA = [
     {
         numberIcon: number6Icon,
         text: "Let Herbert guide you through your fresh start in Germany once you get there.",
+    },
+];
+export const PRICING_PLANS_DATA = [
+    {
+        heading: "$5/mo",
+        quality: basicIcon,
+        text: "Ideal for newcomers! Get quick and reliable answers to your basic questions about German immigration policies. Perfect for a brief introduction without long-term commitment.",
+        messages: "10 messages",
+        button: "Upgrade to Basic",
+    },
+    {
+        heading: "$10/mo",
+        quality: standerdIcon,
+        text: "Your go-to resource for thorough visa application preparation. Ensure you have all the necessary information and answers to confidently navigate the German visa process.",
+        messages: "25 messages",
+        button: "Upgrade to Standard",
+    },
+    {
+        heading: "$20/mo",
+        quality: premiumIcon,
+        text: "Have Herbert accompany you throughout your entire visa application journey. With extensive message credits, you can ask questions whenever you need, ensuring a smooth and informed experience.",
+        messages: "50 messages",
+        button: "Upgrade to Premium",
     },
 ];

@@ -20,12 +20,14 @@ module.exports = {
       },
       fontSize: {
         'custom-2xl': "28px",
-        'custom-3xl': "56px",
+        'custom-3xl': "44px",
+        'custom-4xl': "56px",
       },
       colors: {
         gray: "#00000029",
         lightGray: "#00000029",
         offGray: "#5F5F5F",
+        mediumGray: "#D6D0CB",
         offBlack: "#010101",
         darkRed: "#FF4C24",
         lightOrange: "#FF9748",
