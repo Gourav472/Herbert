@@ -15,7 +15,7 @@ const Hero = () => {
           <PrimaryButton className="mt-8 sm:mt-9 md:mt-[42px] max-sm:max-w-[302px] max-sm:text-sm max-sm:leading-4 max-w-[338px] w-full" text="Start your conversation with Herbert" />
         </div>
       </div>
-      <img className='max-w-[330px] md:max-w-[360px] hero-image-position lg:hidden w-full ps-[14px]' src={heroImage} alt="hero-image" />
+      <img className='max-w-[330px] max-sm:min-h-[372px] md:max-w-[360px] hero-image-position lg:hidden w-full ps-[14px]' src={heroImage} alt="hero-image" />
       <img className='z-10 max-lg:hidden max-w-[329px] absolute top-[155px] lg:left-1 xl:left-[7%]' src={helloMan} alt="hero-man" />
       <img className='z-10 max-lg:hidden max-w-[324px] absolute top-[212px] lg:right-1 xl:right-[4%]' src={secondMan} alt="hero-man" />
     </div>

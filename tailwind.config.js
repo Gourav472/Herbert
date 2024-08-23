@@ -39,7 +39,7 @@ module.exports = {
 
       },
       boxShadow: {
-        '3xl': "0px 12px 20px -10px #FF9748",
+        '3xl': "0px -12px 10px -10px #FF9748 inset",
         '4xl': "0px 0px 16px 6px #8080801F",
 
       },

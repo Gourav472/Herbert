@@ -1,4 +1,5 @@
 import applicationIcon from '../assets/images/svg/application.svg'
+import basicIcon from '../assets/images/svg/basic.svg'
 import checklistIcon from '../assets/images/svg/checklist.svg'
 import languageIcon from '../assets/images/svg/language.svg'
 import number1Icon from '../assets/images/svg/number1.svg'
@@ -7,9 +8,8 @@ import number3Icon from '../assets/images/svg/number3.svg'
 import number4Icon from '../assets/images/svg/number4.svg'
 import number5Icon from '../assets/images/svg/number5.svg'
 import number6Icon from '../assets/images/svg/number6.svg'
-import basicIcon from '../assets/images/svg/basic.svg'
-import standerdIcon from '../assets/images/svg/standerd.svg'
 import premiumIcon from '../assets/images/svg/premium.svg'
+import standerdIcon from '../assets/images/svg/standerd.svg'
 
 export const NAV_ITEMS_DATA = [
     {
@@ -91,5 +91,50 @@ export const PRICING_PLANS_DATA = [
         text: "Have Herbert accompany you throughout your entire visa application journey. With extensive message credits, you can ask questions whenever you need, ensuring a smooth and informed experience.",
         messages: "50 messages",
         button: "Upgrade to Premium",
+    },
+];
+export const FAQS = [
+    {
+        question: "What is Herbert?",
+        answer:
+            "Herbert is an AI-powered assistant designed to help with German visa and immigration processes. It provides guidance, answers questions, and helps you navigate the requirements and procedures involved.",
+    },
+    {
+        question: "How accurate is the information provided by Herbert?",
+        answer:
+            "Herbert is an AI-powered assistant designed to help with German visa and immigration processes. It provides guidance, answers questions, and helps you navigate the requirements and procedures involved.",
+    },
+    {
+        question: "How can I access Herbert?",
+        answer:
+            "Herbert is an AI-powered assistant designed to help with German visa and immigration processes. It provides guidance, answers questions, and helps you navigate the requirements and procedures involved.",
+    },
+    {
+        question: "How can Herbert help me with my visa application?",
+        answer:
+            "Herbert is an AI-powered assistant designed to help with German visa and immigration processes. It provides guidance, answers questions, and helps you navigate the requirements and procedures involved.",
+    },
+    {
+        question: "Is Herbert available in multiple languages?",
+        answer:
+            "Herbert is an AI-powered assistant designed to help with German visa and immigration processes. It provides guidance, answers questions, and helps you navigate the requirements and procedures involved.",
+    },
+    {
+        question: "Can Herbert help me fill out my visa application forms?",
+        answer:
+            "Herbert is an AI-powered assistant designed to help with German visa and immigration processes. It provides guidance, answers questions, and helps you navigate the requirements and procedures involved.",
+    }
+];
+export const FOOTER_LINKS_DATA = [
+    {
+        heading: "Quick Links",
+        services: "Services",
+        about: "About Us",
+
+    },
+];
+export const FOOTER_SUPPORT_DATA = [
+    {
+
     },
 ];
