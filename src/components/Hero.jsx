@@ -4,9 +4,10 @@ import secondMan from '../assets/images/webp/hero-second-man.webp'
 import Header from '../common/Header'
 import PrimaryButton from '../common/PrimaryButton'
 import PrimaryParagraph from '../common/PrimaryParagraph'
+
 const Hero = () => {
   return (
-    <div className='bg-hero-bg bg-full flex flex-col relative lg:h-[810px]'>
+    <div id='home' className='bg-hero-bg bg-full flex flex-col relative lg:h-[810px] xl:max-w-[1920px] xl:mx-auto'>
       <div className='container relative z-20'>
         <Header />
         <div className='pt-[72px] sm:pt-24 md:pt-28 lg:pt-32 xl:pt-[139px] pb-[78px] flex flex-col items-center'>

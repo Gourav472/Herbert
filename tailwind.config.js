@@ -35,8 +35,9 @@ module.exports = {
       },
       backgroundImage: {
         'hero-bg': "url(./assets/images/webp/hero-bg.webp)",
-        'gradientOrange': "linear-gradient(241.09deg, rgba(255, 76, 36, 0.15) -34.32%, rgba(255, 227, 108, 0.15) 109.3%)",
-
+        'gradient-orange': "linear-gradient(241.09deg, rgba(255, 76, 36, 0.15) -34.32%, rgba(255, 227, 108, 0.15) 109.3%)",
+        'team-bg': "url(./assets/images/webp/team-bg.webp)",
+        'faq-bg': "url(./assets/images/webp/faq-bg.webp)",
       },
       boxShadow: {
         '3xl': "0px -12px 10px -10px #FF9748 inset",

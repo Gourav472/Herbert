@@ -55,8 +55,16 @@ export const TOURISM_DATA = [
         numberIcon: number3Icon,
         text: "Write your CV / Motivation Letter with Herbert",
     },
+    {
+        numberIcon: number5Icon,
+        text: "Practice your German interactively with Herbert",
+    },
 ];
 export const WORK_DATA = [
+    {
+        numberIcon: number2Icon,
+        text: "Receive a checklist with all necessary documents",
+    },
     {
         numberIcon: number4Icon,
         text: "Help prepare for your visa interview",
@@ -126,15 +134,13 @@ export const FAQS = [
     }
 ];
 export const FOOTER_LINKS_DATA = [
-    {
-        heading: "Quick Links",
-        services: "Services",
-        about: "About Us",
-
-    },
+    { text: "Services", url:"#services", },
+    { text: "About Us", url:"#about", },
+    { text: "Features", url:"#features", },
+    { text: "Plans", url:"#plans", },
 ];
 export const FOOTER_SUPPORT_DATA = [
-    {
-
-    },
+    { text: "Help Center" },
+    { text: "Term & Conditions" },
+    { text: "Privacy Policy" },
 ];

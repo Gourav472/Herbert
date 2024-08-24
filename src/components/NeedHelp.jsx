@@ -3,8 +3,8 @@ import PrimaryParagraph from '../common/PrimaryParagraph'
 
 const NeedHelp = () => {
     return (
-        <div className='container'>
-            <div className='max-w-[1140px] w-full px-5 bg-lightOrange rounded-xl max-sm:py-5 sm:py-10 md:py-14 lg:py-16 flex flex-col items-center translate-y-[134px] mt-[-14px]'>
+        <div className='container relative z-30'>
+            <div className='max-w-[1140px] w-full px-5 bg-lightOrange rounded-xl max-sm:py-5 sm:py-10 md:py-14 lg:py-16 flex flex-col items-center max-sm:translate-y-[186px] sm:translate-y-[134px] max-sm:mt-[-120px] sm:mt-[-14px]'>
                 <PrimaryHeading className="text-white max-w-[632px]" text="Need Help in Your Visa? Ask Herbert Now!" />
                 <PrimaryParagraph className="max-w-[528px] sm:pt-4 max-sm:pt-3 text-white" text="Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit nullam." />
                 <div className='flex max-sm:flex-col items-center gap-3 sm:gap-4 max-sm:pt-8 sm:pt-[42px]'>
