@@ -33,7 +33,7 @@ const MainFeatures = () => {
                         <div className='max-w-[151px] sm:max-w-[284px] md:max-w-[325px] max-lg:mt-5 w-full flex flex-col max-sm:gap-6 gap-[56px] max-lg:pt-6'>
                             {TOURISM_DATA.map((items, index) => (
                                 <div key={index} className={`${index === 1 ? "hidden md:flex" : ""} ${index === 2 ? "max-md:mt-[19px]" : ""} ${index === 3 ? "md:hidden " : ""} flex flex-col items-start lg:items-end max-sm:gap-2 sm:gap-4`}>
-                                    <img className='max-sm:w-[30px] max-sm:h-[30px] sm:w-[40px] sm:h-[40px]' src={items.numberIcon} alt="" />
+                                    <img className='max-sm:w-[30px] max-sm:h-[30px] sm:w-[40px] sm:h-[40px]' src={items.numberIcon} alt="number-icon" />
                                     <p className='font-medium text-base sm:text-xl leading-[19px] sm:leading-6 text-offBlack text-left lg:!text-right'>{items.text}</p>
                                 </div>
                             ))}
@@ -42,7 +42,7 @@ const MainFeatures = () => {
                         <div className='max-w-[151px] sm:max-w-[284px] md:max-w-[325px] max-lg:mt-5 w-full flex flex-col max-sm:gap-6 gap-[56px] max-lg:pt-6'>
                             {WORK_DATA.map((items, index) => (
                                 <div key={index} className={`${index === 0 ? " md:hidden" : ""} ${index === 1 ? "block" : ""} ${index === 2 ? "hidden md:flex" : ""} ${index === 3 ? "block max-md:mt-[19px]" : ""} ${index === 4 ? "block" : ""} flex flex-col items-start max-sm:gap-2 sm:gap-4 `}>
-                                    <img className='max-sm:w-[30px] max-sm:h-[30px] sm:w-[40px] sm:h-[40px]' src={items.numberIcon} alt="" />
+                                    <img className='max-sm:w-[30px] max-sm:h-[30px] sm:w-[40px] sm:h-[40px]' src={items.numberIcon} alt="icon" />
                                     <p className='font-medium text-base sm:text-xl leading-[19px] sm:leading-6 text-offBlack text-left'>{items.text}</p>
                                 </div>
                             ))}
