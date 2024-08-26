@@ -63,7 +63,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className='w-full h-[1px] bg-lightGray'></div>
+            <div className='max-w-[1920px] mx-auto h-[1px] bg-lightGray'></div>
             <div className='px-6 py-4'>
                 <p className='sm:text-base font-normal max-sm:text-[14px] max-sm:leading-[21px] sm:leading-6 text-offGray text-center'>
                     Copyright © {currentYear} herbert, All rights reserved
