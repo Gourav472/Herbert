@@ -1,8 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import footerLogo from '../assets/images/webp/footer-logo.webp';
 import { FOOTER_LINKS_DATA, FOOTER_SUPPORT_DATA } from '../common/Helper';
 import Icons from '../common/Icons';
-import PrimaryParagraph from '../common/PrimaryParagraph';
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -23,10 +22,7 @@ const Footer = () => {
                             <a href="#home">
                                 <img className='max-w-[210px] sm:max-w-[326px]' src={footerLogo} alt="herbert-logo" />
                             </a>
-                            <PrimaryParagraph
-                                className="text-start max-sm:pt-3 max-sm:text-sm max-sm:leading-[21px] sm:pt-[15px] max-w-[600px] lg:max-w-[400px]"
-                                text="Lorem ipsum dolor sit amet consectetur. Fusce tortor etiam vitae velit mi sed mattis tempor tristique. Purus sed phasellus metus lectus auctor."
-                            />
+                            <p className="text-start max-sm:pt-3 max-sm:text-sm max-sm:leading-[21px] sm:pt-[15px] max-w-[600px] lg:max-w-[400px] font-normal sm:text-base sm:leading-6 text-offGray">Lorem ipsum dolor sit amet consectetur. Fusce tortor etiam vitae velit mi sed mattis tempor tristique. Purus sed phasellus metus lectus auctor.</p>
                         </div>
                     </div>
                     <div className='w-6/12 sm:w-4/12 lg:w-2/12 mt-8 lg:mt-4 px-3 flex lg:justify-center'>

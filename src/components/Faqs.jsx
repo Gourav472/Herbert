@@ -1,4 +1,5 @@
-import React, { useRef, useState } from 'react';
+import gsap from 'gsap';
+import React, { useEffect, useRef, useState } from 'react';
 import faqBg from '../assets/images/webp/faq-bg.webp';
 import { FAQS } from '../common/Helper';
 import PrimaryButton from '../common/PrimaryButton';
@@ -9,6 +10,7 @@ const Faqs = () => {
     const [activeIndex, setActiveIndex] = useState(null);
     const [height, setHeight] = useState(0);
     const contentRef = useRef(null);
+    const faqRefs = useRef([]);
 
     const toggleAccordion = (index) => {
         if (activeIndex === index) {
@@ -19,6 +21,49 @@ const Faqs = () => {
             setActiveIndex(index);
         }
     };
+    const animations = () => {
+        const tl = gsap.timeline();
+        faqRefs.current.forEach((faqItem, index) => {
+            if (faqItem) {
+                tl.fromTo(faqItem, {
+                    x: index % 2 === 0 ? -2000 : 2000, 
+                    opacity: 0
+                }, {
+                    x: 0,
+                    opacity: 1,
+                    duration: 0.3,
+                    delay: 0.2,
+                    ease: 'power2.out',
+                    stagger: 0.4,
+                });
+            }
+        });
+    };
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        animations();
+                        observer.unobserve(entry.target);
+                    }
+                });
+            },
+            {
+                rootMargin: '0px 0px -300px 0px',
+                threshold: 0
+            }
+        );
+        const sectionRef = document.getElementById('services');
+        if (sectionRef) {
+            observer.observe(sectionRef);
+        }
+        return () => {
+            if (sectionRef) {
+                observer.unobserve(sectionRef);
+            }
+        };
+    }, []);
 
     return (
         <div id='services' className='relative xl:max-w-[1920px] xl:mx-auto'>
@@ -29,7 +74,10 @@ const Faqs = () => {
                     <div className='row flex flex-wrap flex-row -mx-3 pt-4 sm:pt-10 max-sm:pb-8 sm:pb-12'>
                         {FAQS.map((faq, index) => (
                             <div key={index} className='w-full lg:w-6/12 px-3'>
-                                <div className={`overflow-hidden ease-linear rounded-lg ${activeIndex === index ? "z-30 border-transparent shadow-4xl" : "border-[1px] border-lightGray"} bg-white max-sm:mt-4 sm:mt-6`}>
+                                <div
+                                    ref={(el) => faqRefs.current[index] = el}
+                                    className={`overflow-hidden opacity-0 ease-linear rounded-lg ${activeIndex === index ? "z-30 border-transparent shadow-4xl" : "border-[1px] border-lightGray"} ${activeIndex === index ? "faq-left-animation" : "faq-left-animation"} bg-white max-sm:mt-4 sm:mt-6`}
+                                >
                                     <button
                                         onClick={() => toggleAccordion(index)}
                                         className={`${activeIndex === index ? "z-30 max-sm:p-[14px_14px_0px_14px] p-[18px_24px_0px_24px] border-transparent" : "max-sm:p-[15px_16px_14px_14px] p-[18px_24px]"} w-full text-left flex max-sm:items-start items-center justify-between`}
