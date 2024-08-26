@@ -47,7 +47,7 @@ const PricingPlans = () => {
     }, []);
 
     return (
-        <div ref={sectionRef} className='bg-offOrange'>
+        <div id='sources' ref={sectionRef} className='bg-offOrange'>
             <div id='plans' className='py-16 sm:py-20 relative xl:max-w-[1920px] xl:mx-auto'>
                 <div className='container'>
                     <div className='flex flex-col items-center relative'>

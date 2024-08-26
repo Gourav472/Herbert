@@ -102,7 +102,7 @@ const MainFeatures = () => {
                         </div>
                     ))}
                 </div>
-                <div className='flex flex-col items-center'>
+                <div id='herbert' className='flex flex-col items-center'>
                     <PrimaryHeading text="Herbert Main" redText="Features" />
                     <PrimaryParagraph className="max-w-[556px] max-sm:pt-[14px] pt-4" text="Lorem ipsum dolor sit amet consectetur. Tellus ipsum semper eget ornare justo netus proin lacus sed." />
                 </div>

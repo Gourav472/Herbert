@@ -71,7 +71,7 @@ const NeedHelp = () => {
     }, []);
 
     return (
-        <div className='container relative z-30'>
+        <div id='vision' className='container relative z-30'>
             <div className='max-w-[1140px] w-full px-5 bg-lightOrange rounded-xl max-sm:py-5 sm:py-10 md:py-14 lg:py-16 flex flex-col items-center max-sm:translate-y-[186px] sm:translate-y-[134px] max-sm:mt-[-120px] sm:mt-[-14px]'>
                 <h2 ref={headingRef} animate="true" className='font-rubik overflow-hidden text-white max-w-[632px] capitalize max-sm:text-[22px] max-sm:leading-7 font-semibold sm:text-2xl sm:leading-8 md:leading-9 md:text-3xl lg:text-5xl lg:leading-[56.88px] text-center'>Need Help in Your Visa? <span className='font-rubik overflow-hidden'>Ask Herbert Now!</span></h2>
                 <PrimaryParagraph className="max-w-[528px] sm:pt-4 max-sm:pt-3 text-white" text="Lorem ipsum dolor sit amet consectetur adipiscing eli mattis sit phasellus mollis sit aliquam sit nullam." />
