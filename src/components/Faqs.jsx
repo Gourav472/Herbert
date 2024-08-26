@@ -5,6 +5,8 @@ import { FAQS } from '../common/Helper';
 import PrimaryButton from '../common/PrimaryButton';
 import PrimaryHeading from '../common/PrimaryHeading';
 import PrimaryParagraph from '../common/PrimaryParagraph';
+import SplitType from 'split-type';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 const Faqs = () => {
     const [activeIndex, setActiveIndex] = useState(null);
@@ -26,7 +28,7 @@ const Faqs = () => {
         faqRefs.current.forEach((faqItem, index) => {
             if (faqItem) {
                 tl.fromTo(faqItem, {
-                    x: index % 2 === 0 ? -2000 : 2000, 
+                    x: index % 2 === 0 ? -2000 : 2000,
                     opacity: 0
                 }, {
                     x: 0,
@@ -64,12 +66,39 @@ const Faqs = () => {
             }
         };
     }, []);
+    const headingRef = useRef(null);
+    useEffect(() => {
+        if (headingRef.current) {
+            const typeSplit = new SplitType(headingRef.current, {
+                types: 'lines, words, chars',
+                tagName: 'span'
+            });
+            headingRef.current.querySelectorAll('.char').forEach(el => {
+                el.classList.add('font-rubik');
+            });
+            gsap.from(headingRef.current.querySelectorAll('.char'), {
+                y: '-100%',
+                opacity: 1,
+                duration: 0.3,
+                ease: "power3.in",
+                stagger: 0.04,
+                scrollTrigger: {
+                    trigger: headingRef.current,
+                    start: 'top center',
+                },
+            });
+            return () => {
+                ScrollTrigger.getAll().forEach(trigger => trigger.kill());
+                gsap.killTweensOf(headingRef.current.querySelectorAll('.char'));
+            };
+        }
+    }, []);
 
     return (
         <div id='services' className='relative xl:max-w-[1920px] xl:mx-auto'>
             <div className='container relative z-20'>
                 <div className='flex flex-col items-center'>
-                    <PrimaryHeading text="Frequently Asked" redText="Questions" />
+                    <h2 ref={headingRef} className='font-rubik overflow-hidden text-offBlack capitalize max-sm:text-[22px] max-sm:leading-7 font-semibold sm:text-2xl sm:leading-8 md:leading-9 md:text-3xl lg:text-5xl lg:leading-[56.88px] text-center sm:text-nowrap'>Frequently Asked <span className='font-rubik max-sm:!overflow-hidden sm:!inline text-darkRed'>Questions</span></h2>
                     <PrimaryParagraph className="max-w-[622px] sm:pt-4 max-sm:pt-[14px]" text="Help users find quick answers to common queries about Herbert, our AI-powered assistant for German visa and immigration processes." />
                     <div className='row flex flex-wrap flex-row -mx-3 pt-4 sm:pt-10 max-sm:pb-8 sm:pb-12'>
                         {FAQS.map((faq, index) => (
