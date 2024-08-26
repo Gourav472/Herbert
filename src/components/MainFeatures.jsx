@@ -96,9 +96,7 @@ const MainFeatures = () => {
                 <div className='flex md:h-[238px] max-md:flex-wrap max-md:justify-center md:items-center max-sm:gap-3 sm:gap-6 max-sm:mt-4 sm:mt-7 md:mt-12 lg:mt-0 max-lg:mb-20 lg:translate-y-[-128px]'>
                     {FEATURES_CARDS_DATA.map((items, index) => (
                         <div key={index} className='px-5 flex flex-col border max-sm:max-h-[155px] feature-cards-animation md:max-h-[196px] md:hover:max-h-[238px] md:hover:py-[40px] bg-white border-gray rounded-lg max-sm:max-w-[327px] max-sm:py-[22px] sm:max-w-[284px] md:max-w-[364px] duration-300 ease-linear w-full hover:border-transparent hover:shadow-4xl py-5 items-center'>
-                            <div className='sm:w-[56px] sm:h-[56px] max-sm:w-[48px] max-sm:h-[48px] rounded-full bg-gradient-orange flex justify-center items-center'>
-                                <img width={24} height={24} src={items.icon} alt="application" />
-                            </div>
+                                <img className='sm:w-[56px] sm:h-[56px] max-sm:w-[48px] max-sm:h-[48px]' src={items.icon} alt="icons" />
                             <h3 className='font-medium max-sm:text-base max-sm:leading-[19px] text-xl leading-6 text-offBlack text-center max-sm:pt-[14px] pt-4'>{items.heading}</h3>
                             <p className='max-w-[196px] text-center max-sm:text-sm max-sm:leading-[21px] font-normal text-base leading-6 text-offGray max-sm:pt-2 pt-3'>{items.text}</p>
                         </div>

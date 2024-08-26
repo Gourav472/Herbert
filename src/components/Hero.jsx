@@ -11,7 +11,7 @@ const Hero = () => {
   useLayoutEffect(() => {
     var tl = gsap.timeline();
     tl.to(".hello-man", {
-      delay: "0.7",
+      delay: "2",
       duration: "0.9",
       scale: 1,
     }, "<")

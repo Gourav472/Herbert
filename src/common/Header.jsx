@@ -21,7 +21,7 @@ const Header = () => {
     useLayoutEffect(() => {
         var tl = gsap.timeline();
         tl.to(".header-down", {
-            delay:"0.3",
+            delay:"2",
             opacity: "1",
             y:"0",
             stagger :"0.2"
