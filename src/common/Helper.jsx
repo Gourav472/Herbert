@@ -13,15 +13,15 @@ import standerdIcon from '../assets/images/svg/standerd.svg'
 
 export const NAV_ITEMS_DATA = [
     {
-        url: "#herbert",
+        path: "/",
         text: "Herbert"
     },
     {
-        url: "#sources",
+        path: "/sources",
         text: "Sources"
     },
     {
-        url: "#vision",
+        path: "/vision",
         text: "Our Vision"
     }
 ];

@@ -1,26 +1,19 @@
-import Hero from './components/Hero';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import './App.css';
-import MainFeatures from './components/MainFeatures';
-import PricingPlans from './components/PricingPlans';
-import Team from './components/Team';
-import Faqs from './components/Faqs';
-import NeedHelp from './components/NeedHelp';
-import Footer from './components/Footer';
-import ScrollToTop from './common/ScrollToTop';
-import PreLoader from './common/PreLoader';
+import LandingPage from './view/LandingPage';
+import SourcesPage from './view/SourcesPage';
+import VisionPage from './view/VisionPage';
 
 function App() {
   return (
-    <div className='relative overflow-hidden'>
-      <Hero />
-      <MainFeatures />
-      <PricingPlans />
-      <Team />
-      <Faqs />
-      <NeedHelp />
-      <Footer />
-      <ScrollToTop />
-      <PreLoader />
+    <div className='relative overflow-hidden font-lato'>
+      <BrowserRouter>
+      <Routes>
+      <Route path='/' element={<LandingPage />} />
+        <Route path='/sources' element={<SourcesPage/>} />
+        <Route path='/vision' element={<VisionPage/>} />
+      </Routes>
+      </BrowserRouter>
     </div>
   );
 }

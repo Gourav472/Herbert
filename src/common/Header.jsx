@@ -5,6 +5,7 @@ import menu from '../assets/images/svg/menu.svg';
 import closeMenu from '../assets/images/svg/close-menu.svg';
 import PrimaryButton from './PrimaryButton';
 import { gsap } from "gsap";
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const [show, setShow] = useState(false);
@@ -21,10 +22,10 @@ const Header = () => {
     useLayoutEffect(() => {
         var tl = gsap.timeline();
         tl.to(".header-down", {
-            delay:"2",
+            delay: "2",
             opacity: "1",
-            y:"0",
-            stagger :"0.2"
+            y: "0",
+            stagger: "0.2"
         })
     });
 
@@ -36,7 +37,7 @@ const Header = () => {
                     <span className='bg-lightGray max-w-[327px] sm:hidden w-full absolute top-[40%] h-[1px]'></span>
                     <span className='bg-lightGray max-w-[327px] sm:hidden w-full absolute top-[50%] h-[1px]'></span>
                     {NAV_ITEMS_DATA.map((items, index) => (
-                        <a key={index} href={items.url} onClick={(e) => handleClick(e, items.url.substring(1))} className='font-normal translate-y-[-75px] opacity-0 text-sm header-down leading-[21px] sm:text-base sm:leading-6 text-offGray hover:text-offBlack duration-300 ease-linear after:absolute after:bg-offBlack after:h-[3px] after:w-0 after:left-[50%] after:translate-x-[-50%] hover:after:w-[31px] after:bottom-[-5px] after:rounded after:duration-300 after:ease-linear after:mx-auto relative'>{items.text}</a>
+                        <Link to={items.path} key={index} className='font-normal translate-y-[-75px] opacity-0 text-sm header-down leading-[21px] sm:text-base sm:leading-6 text-offGray hover:text-offBlack duration-300 ease-linear after:absolute after:bg-offBlack after:h-[3px] after:w-0 after:left-[50%] after:translate-x-[-50%] hover:after:w-[31px] after:bottom-[-5px] after:rounded after:duration-300 after:ease-linear after:mx-auto relative'>{items.text}</Link>
                     ))}
                     <PrimaryButton className="mt-[-17px] text-nowrap sm:hidden max-w-[302px] w-full h-[45px] max-sm:text-sm max-sm:leading-4" text="Start your conversation with Herbert" />
                 </div>

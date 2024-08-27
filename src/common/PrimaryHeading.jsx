@@ -13,11 +13,12 @@ const PrimaryHeading = ({ text, redText, className, blackText }) => {
                 types: 'lines, words, chars',
                 tagName: 'span'
             });
-            headingRef.current.querySelectorAll('.char').forEach(el => {
-                el.classList.add('font-rubik');
+            const charElements = headingRef.current.querySelectorAll('.char');
+            const charRefs = Array.from(charElements).map(() => React.createRef());
+            charElements.forEach((el, index) => {
+                charRefs[index].current = el;
             });
-
-            gsap.from(headingRef.current.querySelectorAll('.char'), {
+            gsap.from(charRefs.map(ref => ref.current), {
                 y: '-100%',
                 opacity: 1,
                 duration: 0.3,
@@ -28,10 +29,10 @@ const PrimaryHeading = ({ text, redText, className, blackText }) => {
                     start: 'top center',
                 },
             });
-
             return () => {
                 ScrollTrigger.getAll().forEach(trigger => trigger.kill());
-                gsap.killTweensOf(headingRef.current.querySelectorAll('.char'));
+                gsap.killTweensOf(charRefs.map(ref => ref.current));
+                typeSplit.revert();
             };
         }
     }, []);
